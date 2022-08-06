@@ -5,17 +5,7 @@ import { client } from "../libs/client";
 export default function Home({ blog }) {
   return (
     <>
-    <div>
-      <ul>
-        {blog.map((blog) => (
-          <li key={blog.id}>
-            <Link href={`/blog/${blog.id}`}>
-              <a>{blog.title}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    
       <div className="grid place-items-center w-full">
         <div className="relative">
           <img src="/images/photo-ac_com/classroom_miniature_large.jpg" alt="Classroom Miniature"/>
@@ -42,7 +32,7 @@ export default function Home({ blog }) {
         年代別
       </h1>
       <div className="container mx-auto p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-4 lg:grid-cols-4 xl:grid-cols-4 gap-2">
-        <div className="rounded overflow-hidden shadow-lg">
+        <div className="rounded overflow-hidden shadow-lg dark:border dark:border-solid dark:border-stone-100">
           <img className="w-full aspect-video object-cover" src="/images/photo-ac_com/kindargarten_children_in_uniform.jpg" alt="kindargarten children in uniform" />
           <div className="px-5 py-2 sm:py-3">
             <p>未就学児</p>
@@ -59,7 +49,7 @@ export default function Home({ blog }) {
             </span>
           </div>
         </div>
-        <div className="rounded overflow-hidden shadow-lg">
+        <div className="rounded overflow-hidden shadow-lg dark:border dark:border-solid dark:border-stone-100">
           <img className="w-full aspect-video object-cover" src="/images/burst/teacher-flatlay.webp" alt="teacher's desk" />
           <div className="px-5 py-2 sm:py-3">
             <p>進学</p>
@@ -73,7 +63,7 @@ export default function Home({ blog }) {
             </span>
           </div>
         </div>
-        <div className="rounded overflow-hidden shadow-lg">
+        <div className="rounded overflow-hidden shadow-lg dark:border dark:border-solid dark:border-stone-100">
           <img className="w-full aspect-video object-cover" src="/images/burst/typed-text-says-work.jpg" alt="Photo of typed text that says work" />
           <div className="px-5 py-2 sm:py-3">
             <p>仕事</p>
@@ -82,7 +72,7 @@ export default function Home({ blog }) {
             <span className="text-sm">障害者福祉制度を利用したものだけでなくさまざまな形での就職、就業などを案内します。</span>
           </div>
         </div>
-        <div className="rounded overflow-hidden shadow-lg">
+        <div className="rounded overflow-hidden shadow-lg dark:border dark:border-solid dark:border-stone-100">
           <img className="w-full aspect-video object-cover" src="/images/burst/parent_baby_holding_hands.jpg" alt="a parent and a baby holding hands" />
           <div className="px-5 py-2 sm:py-3">
             <p>保護者</p>
@@ -97,6 +87,17 @@ export default function Home({ blog }) {
        記事一覧
      </h1>
      <div className="container mx-auto p-10 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-5">
+     </div>
+     <div>
+      <ul>
+        {blog.map((blog) => (
+           <li key={blog.id}>
+             <Link href={`/blog/${blog.id}`}>
+               <a>{blog.title}</a>
+             </Link>
+           </li>
+        ))}
+      </ul>
      </div>
     </>
   );
